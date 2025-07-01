@@ -1,16 +1,17 @@
 const CACHE_NAME = 'buddhist-meditimer-cache-v1';
+
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/css/becss.css',
-  '/app.js',
-  '/LICENSE.md',
-'/README.md',
-  '/images/favicon.ico',
-    '/images/icon-192.png',
-    '/images/icon-512.png',
-    '/images/main-logo.webp',
-  '/gong.mp3',
+  './',
+  './index.html',
+  './css/becss.css',
+  './app.js',
+  './LICENSE.md',
+  './README.md',
+  './images/favicon.ico',
+  './images/icon-192.png',
+  './images/icon-512.png',
+  './images/main-logo.webp',
+  './gong.mp3'
 ];
 
 self.addEventListener('install', evt => {

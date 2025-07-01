@@ -1,9 +1,9 @@
 {
   "name": "Buddhist Meditimer",
   "short_name": "Meditimer",
-  "start_url": "./",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#DDC194;",
+  "background_color": "#DDC194",
   "theme_color": "#222222",
   "orientation": "portrait",
   "icons": [
