@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meditimer</title>
+  <link rel="stylesheet" href="/css/becss.css" />
+</head>
+<body>
+  <div class="be-align-center">
+
+    <img src="/images/main-logo.webp" alt="Meditimer logo" width="130">
+   <h1>Meditimer</h1>
+
+  <div class="timer-settings">
+    <label for="hours">Hours:</label>
+    <select id="hours"></select>
+    <label for="minutes">Minutes:</label>
+    <select id="minutes"></select>
+  </div>
+
+  <div class="flip-clock">
+    <div class="flip-unit" id="hh">00</div>:
+    <div class="flip-unit" id="mm">00</div>:
+    <div class="flip-unit" id="ss">00</div>
+  </div>
+
+  <div class="controls">
+    <button class="be-btn be-btn-pill be-bg-turquoise be-shadow-strong" id="start-btn">Start</button>
+    <button class="be-btn be-btn-pill be-bg-silver be-shadow-strong" id="pause-btn">Pause</button>
+    <button class="be-btn be-btn-pill be-bg-pumpkin be-shadow-strong" id="stop-btn">Stop</button>
+  </div>
+ </div>
+
+  <audio id="gong" src="gong.mp3"></audio>
+
+  <script src="app.js"></script>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.log('Service Worker registration failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
+
