@@ -69,7 +69,7 @@ select {
 	--asbestos: #7f8c8d;
 
 /* Font Families */
-	--font-type-1: 'Bebas', 'Bebas2', 'MontserratBlack';
+	--font-type-1: 'Open Sans', 'Montserrat', 'sans-serif';
 	--font-type-2: Verdana, Arial, Helvetica, sans-serif;
 	--font-type-3: 'Berkshire', Tahoma, sans-serif;
 	--font-type-4: 'Open Sans', 'Montserrat', 'sans-serif';

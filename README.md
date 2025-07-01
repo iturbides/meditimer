@@ -1,9 +1,12 @@
 <h1>About Meditimer</h1>
 
 <img href="/images/main-logo.png">
-<p>The sixth precept in Buddhism advises practitioners to refrain from eating at improper times, traditionally meaning after solar noon—the time when the sun is at its highest point. During the Buddha’s time, this was observed according to the actual position of the sun in the sky, not by a standardized clock. However, modern timekeeping, which relies on fixed national or regional time zones, does not account for the Earth's curvature or longitudinal differences. As a result, solar noon can vary significantly even within the same country.</p>
 
-<p>This app helps practitioners respect the original intent of the precept by accurately determining solar noon based on their precise location, allowing for a more faithful and mindful observance of this ethical guideline.</p>
+<p>Buddhist Meditimer is a simple and straightforward meditation timer app. It helps you set a meditation duration easily without any complicated options. Just choose your time, start the timer, and relax — a gentle gong will sound at the end to mark the session’s completion.</p>
+
+<p>This app is also a Progressive Web App (PWA), so once installed, it can be used offline without an internet connection. Perfect for anyone looking for a no-fuss, reliable meditation companion.</p>
+
+
 
 
 https://buddhist-meditimer.netlify.app
