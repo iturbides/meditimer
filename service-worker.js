@@ -4,6 +4,8 @@ const FILES_TO_CACHE = [
   '/index.html',
   '/css/becss.css',
   '/app.js',
+  '/LICENSE.md',
+'/README.md',
   '/images/favicon.ico',
     '/images/icon-192.png',
     '/images/icon-512.png',
