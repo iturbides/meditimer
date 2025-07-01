@@ -12,7 +12,9 @@ const stopBtn = document.getElementById("stop-btn");
 
 let totalSeconds = 0;
 let interval = null;
+let wakeLock = null;
 
+// Populate hours select (0 to 12)
 for (let i = 0; i <= 12; i++) {
   const option = document.createElement("option");
   option.value = i;
@@ -20,7 +22,7 @@ for (let i = 0; i <= 12; i++) {
   hoursSelect.appendChild(option);
 }
 
-// Minutes in intervals of 5
+// Populate minutes select in intervals of 5 (0 to 60)
 for (let i = 0; i <= 60; i += 5) {
   const option = document.createElement("option");
   option.value = i;
@@ -42,15 +44,50 @@ function updateDisplay() {
   ssWrap.textContent = secs;
 }
 
-function startTimer() {
+async function requestWakeLock() {
+  if ('wakeLock' in navigator) {
+    try {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => {
+        console.log('Screen Wake Lock released');
+      });
+      console.log('Screen Wake Lock acquired');
+    } catch (err) {
+      console.error(`Wake Lock error: ${err.name}, ${err.message}`);
+    }
+  } else {
+    console.log('Wake Lock API not supported on this browser.');
+  }
+}
+
+async function releaseWakeLock() {
+  if (wakeLock !== null) {
+    try {
+      await wakeLock.release();
+      wakeLock = null;
+      console.log('Screen Wake Lock released manually');
+    } catch (err) {
+      console.error('Error releasing Wake Lock:', err);
+    }
+  }
+}
+
+async function startTimer() {
   if (interval) return;
 
   const hrs = parseInt(hoursSelect.value);
   const mins = parseInt(minutesSelect.value);
 
+  if (hrs === 0 && mins === 0) {
+    alert("Please set a duration greater than 0.");
+    return;
+  }
+
   if (totalSeconds === 0) {
     totalSeconds = (hrs * 60 + mins) * 60;
   }
+
+  await requestWakeLock();
 
   interval = setInterval(() => {
     totalSeconds--;
@@ -60,6 +97,7 @@ function startTimer() {
       interval = null;
       gong.currentTime = 0;
       gong.play().catch(e => console.error("Audio playback failed:", e));
+      releaseWakeLock();
     }
     updateDisplay();
   }, 1000);
@@ -67,18 +105,20 @@ function startTimer() {
   updateDisplay();
 }
 
-function pauseTimer() {
+async function pauseTimer() {
   clearInterval(interval);
   interval = null;
+  await releaseWakeLock();
 }
 
-function resetTimer() {
+async function resetTimer() {
   clearInterval(interval);
   interval = null;
   totalSeconds = 0;
   updateDisplay();
   gong.pause();
   gong.currentTime = 0;
+  await releaseWakeLock();
 }
 
 startBtn.addEventListener("click", startTimer);
