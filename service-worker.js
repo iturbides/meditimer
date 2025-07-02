@@ -11,6 +11,7 @@ const FILES_TO_CACHE = [
   './images/icon-192.png',
   './images/icon-512.png',
   './images/main-logo.webp',
+  './images/github.svg',
   './gong.mp3'
 ];
 
