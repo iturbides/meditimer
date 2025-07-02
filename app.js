@@ -79,7 +79,7 @@ async function startTimer() {
   const mins = parseInt(minutesSelect.value);
 
   if (hrs === 0 && mins === 0) {
-    alert("Please set a duration greater than 0.");
+   alert("Please set a duration greater than 0.");
     return;
   }
 
