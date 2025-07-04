@@ -3,14 +3,17 @@ const CACHE_NAME = 'buddhist-meditimer-cache-v1';
 const FILES_TO_CACHE = [
   './',
   './index.html',
+  './app.js',
   './css/becss.css',
   './app.js',
   './LICENSE.md',
   './README.md',
   './images/favicon.ico',
+  './images/favicon-16.png',
+  './images/favicon-32.png',
   './images/icon-192.png',
   './images/icon-512.png',
-  './images/main-logo.webp',
+  './images/main-logo.png',
   './images/github.svg',
   './gong.mp3'
 ];
