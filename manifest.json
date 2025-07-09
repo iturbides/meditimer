@@ -1,11 +1,13 @@
 {
   "name": "Buddhist Meditimer",
   "short_name": "Meditimer",
-  "start_url": "/",
+  "description": "A simple and offline-ready meditation timer with gong sound at the end.",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#33210F",
   "theme_color": "#222222",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "images/icon-192.png",
@@ -16,6 +18,19 @@
       "src": "images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "images/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "lifestyle"
   ]
 }
+
+
