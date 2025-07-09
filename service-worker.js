@@ -1,4 +1,4 @@
-const CACHE_NAME = 'buddhist-meditimer-cache-v1.3';
+const CACHE_NAME = 'buddhist-meditimer-cache-v1.4';
 
 const FILES_TO_CACHE = [
   '/',
@@ -14,6 +14,7 @@ const FILES_TO_CACHE = [
   '/images/icon-512.png',
   '/images/main-logo.png',
   '/images/github.svg',
+  '/images/bell.svg',
   '/gong.mp3',
 ];
 

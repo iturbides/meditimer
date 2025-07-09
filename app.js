@@ -127,3 +127,13 @@ stopBtn.addEventListener("click", resetTimer);
 
 updateDisplay();
 
+// gong play button
+//
+const manualGongBtn = document.getElementById("manual-gong-btn");
+
+manualGongBtn.addEventListener("click", () => {
+  gong.volume = 1.0;
+  gong.currentTime = 0;
+  gong.play().catch(e => console.error("Manual gong playback failed:", e));
+});
+
