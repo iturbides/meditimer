@@ -7,6 +7,13 @@
 <p>This app is also a Progressive Web App (PWA), so once installed, it can be used offline without an internet connection. Perfect for anyone looking for a no-fuss, reliable meditation companion.</p>
 
 
+<h3>Screenshot</h3>
+
+
+
+![Screenshot](./images/screenshot.jpg)
+
+
 
 
 https://buddhist-meditimer.netlify.app
