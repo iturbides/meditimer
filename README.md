@@ -1,6 +1,6 @@
 <h1>About Meditimer</h1>
+<h2>Namo tassa bhagavato arahato sammā-sambuddhassa</h2>
 
-<img href="/images/main-logo.png">
 
 <p>Buddhist Meditimer is a simple and straightforward meditation timer app. It helps you set a meditation duration easily without any complicated options. Just choose your time, start the timer, and relax — a gentle gong will sound at the end to mark the session’s completion.</p>
 
