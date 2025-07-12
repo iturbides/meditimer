@@ -68,3 +68,15 @@ You can create a shortcut manually:
 firefox --new-window https://buddhist-meditimer.netlify.app
 
 
+
+🛠️ Notes for the Android APK version
+
+If you are using the APK version of Buddhist Meditimer, please note the following:
+
+🔕 Background Execution Must Be Enabled
+In order for the timer to complete and the gong to sound when the screen is off or the device is idle, you must allow background activity for the app in your device settings.
+Without this permission, Android may pause the app when the screen turns off, preventing the gong from playing at the end of the meditation session.
+
+📱 This behavior differs from the PWA version, which—when installed to the home screen—uses a mechanism to keep the screen awake and continues running even in screen-off mode on most devices.
+
+
