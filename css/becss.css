@@ -1270,7 +1270,7 @@ display: block;
 		background-color: var(--dark-dark);
 		z-index: 9999;
 	} 
-.be-nav-items img {	height: 14px; }
+.be-nav-items img {	height: 24px; }
 nav input {  display: none;}
 .be-nav-items, .be-nav-basic {
   list-style-type: none;
@@ -1298,7 +1298,7 @@ nav input {  display: none;}
 .be-nav-menu input { 
 display: none;
 }
-@media (max-width: 37.50em) {
+@media (max-width: 137.50em) {
   .be-nav-items {
     display: none;
   }
@@ -1315,7 +1315,7 @@ display: none;
   }
 	.be-burger::after {	content: "\2630"; }
  .be-nav-menu { 
- 		padding-bottom: 45px; 
+ 		padding-bottom: 5px; 
 		background: var(--dark-dark);
 		z-index: 999;
 
