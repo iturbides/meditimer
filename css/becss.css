@@ -2,13 +2,20 @@
 ***** A simple and hackable Style Sheet **
 ****** Copyright 2023 Matías Iturbides ***/
 
+
+
+#minutes, #hours {
+	border: 0;
+}
+
 .timer-settings {
   margin-bottom: 1rem;
 }
 select {
   font-size: 1.3rem;
   margin: 1rem;
-	background-color: #BB691D;
+	background-color: var(--dark-dark);
+	color: var(--brand-color);
 }
 .controls button {
   font-size: 1.3rem;
@@ -22,7 +29,7 @@ select {
   margin: 2rem 0;
 }
 .flip-unit {
-  background: #222;
+  background: var(--dark-dark);
   color: #BB691D;;
   font-size: 3rem;
   width: 60px;
@@ -41,7 +48,7 @@ select {
 	--dark-accent:#33210F;
 	--light-shades:#cae7e4;
 	--light-accent:#C8E6C9;
-	--dark-dark: #4E3D27;
+	--dark-dark: #000000;
 	--selected-text: #ffe066;
 	--black: #000000;
 	--white: #ffffff;
@@ -106,7 +113,7 @@ summary {
 	box-sizing: border-box;
 }
 html { scroll-behavior: smooth;
-background-color: #33210F;
+background-color: var(--dark-dark);
 }
 body {
 	font-family: var(--font-type-4);
@@ -1044,7 +1051,7 @@ display: block;
 	font-size: 25px;
  }
 .be-btn-ghost {
-	border: .5px solid var(--dark-dark);
+	border: .5px solid var(--brand-color);
 	background-color: transparent;
 }
 .be-btn-pill, .be-bdr-pill { border-radius: 9999px; }
